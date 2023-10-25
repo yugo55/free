@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>株式会社FICTITIOUS | WEB制作</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header_contents">
+      <a href="index.html">FICTITIOUS</a>
+      <nav>
+        <ul>
+          <li><a href="works.html">works</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <p>CONTACT</p>
+      <p style="
+          font-size: 28px;
+          font-weight: 600;
+          padding-top: 10px;
+          border-top: 2px solid #696969;
+        ">
+        ご相談・お問い合わせフォーム
+      </p>
+
+      <form onsubmit="return false;" action="" method="post">
+        <fieldset>
+          <p>お問い合わせ種別</p>
+          <ul>
+            <li>
+              <input type="checkbox" name="webDesign" id="webDesign" />
+              <label class="checkmark" for="webDesign"></label>
+              <label for="webDesign">webデザイン</label>
+            </li>
+            <li>
+              <input type="checkbox" name="system" id="system" />
+              <label class="checkmark" for="system"></label>
+              <label for="system">システム開発</label>
+            </li>
+            <li>
+              <input type="checkbox" name="operation" id="operation" />
+              <label class="checkmark" for="operation"></label>
+              <label for="operation">webサイト運用</label>
+            </li>
+            <li>
+              <input type="checkbox" name="others" id="others" />
+              <label class="checkmark" for="others"></label>
+              <label for="others">その他</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="text-form">
+          <label for="company-name">会社名</label>
+          <input type="text" name="company-name" id="company-name" placeholder="株式会社FICTITIOUS" />
+        </fieldset>
+
+        <fieldset class="text-form">
+          <label for="name">お名前</label>
+          <input type="text" name="name" id="name" />
+        </fieldset>
+
+        <fieldset class="text-form">
+          <label for="tel">電話番号</label>
+          <input type="text" name="tel" id="tel" placeholder="09012345678" />
+        </fieldset>
+
+        <fieldset class="text-form">
+          <label for="email">メールアドレス</label>
+          <input type="text" name="email" id="email" />
+        </fieldset>
+
+        <fieldset class="text-form">
+          <label for="budget">ご予算</label>
+          <div class="arrow">
+            <select name="budget" id="budget">
+              <option hidden>選択してください</option>
+              <option value="ご予算未定">ご予算未定</option>
+              <option value="100万円未満">100万円未満</option>
+              <option value="100万円以上～300万円未満">100万円以上～300万円未満</option>
+              <option value="300万円以上～1000万円未満">300万円以上～1000万円未満</option>
+              <option value="1000万円以上～2000万円未満">1000万円以上～2000万円未満</option>
+              <option value="2000万円以上">2000万円以上</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="text-form">
+          <label for="detail">ご相談内容詳細</label>
+          <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <input type="button" value="送信" onclick="submit();" />
+      </form>
+    </main>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    window.onbeforeunload = function (e) {
+      e.preventDefault();
+      return "";
+    };
+  </script>
+</body>
+
+</html>
